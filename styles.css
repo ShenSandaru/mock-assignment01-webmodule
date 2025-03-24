@@ -1,0 +1,377 @@
+/* Define CSS Variables */
+:root {
+    /* Colors */
+    --primary-bg: #2c3e50;       /* Dark blue for header/footer */
+    --accent-color: #3498db;     /* Light blue for buttons/links */
+    --hover-color: #2980b9;      /* Darker blue for hover effects */
+    --price-color: #e74c3c;      /* Red for price */
+    --border-color: #ddd;        /* Light gray for borders */
+    --text-color: #333;          /* Default text color */
+    --white: #fff;               /* White */
+    --light-bg: #f9f9f9;         /* Light background for sections like amenities and rooms */
+
+    /* Spacing */
+    --spacing-sm: 10px;
+    --spacing-md: 20px;
+    --spacing-lg: 40px;
+
+    /* Sizes */
+    --logo-size: 50px;
+    --testimonial-img-size: 80px;
+    --map-width: 600px;
+    --map-height: 400px;
+}
+
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: var(--text-color);
+}
+
+/* Header Styling */
+header {
+    background-color: var(--primary-bg);
+    padding: var(--spacing-md);
+    text-align: center;
+    color: var(--white);
+}
+
+.header-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: var(--spacing-sm);
+}
+
+.logo {
+    max-width: var(--logo-size);
+    height: auto;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: var(--spacing-md);
+    margin-top: var(--spacing-sm);
+}
+
+nav a {
+    color: var(--white);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav a:hover {
+    color: var(--accent-color);
+}
+
+/* Room Types Section */
+#rooms {
+    padding: var(--spacing-lg);
+    text-align: center;
+    background-color: var(--light-bg);
+}
+
+#rooms h2 {
+    margin-bottom: var(--spacing-md);
+    color: var(--text-color);
+    font-size: 2rem;
+}
+
+/* Container for Room Cards */
+.rooms-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: var(--spacing-md);
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Room Card Styling */
+.room {
+    position: relative;
+}
+
+.room input[type="radio"] {
+    display: none;
+}
+
+.room-card {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--white);
+    border: 1px solid var(--border-color);
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+}
+
+.room-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+}
+
+/* Custom Radio Button Indicator */
+.room input[type="radio"]:checked + .room-card::before {
+    content: '✔';
+    position: absolute;
+    top: var(--spacing-sm);
+    right: var(--spacing-sm);
+    width: 30px;
+    height: 30px;
+    background-color: var(--accent-color);
+    color: var(--white);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1rem;
+}
+
+/* Room Image */
+.room-image img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    display: block;
+}
+
+/* Room Details */
+.room-details {
+    padding: var(--spacing-md);
+    text-align: left;
+}
+
+.room-details h3 {
+    margin-bottom: var(--spacing-sm);
+    color: var(--text-color);
+    font-size: 1.5rem;
+}
+
+.room-details p {
+    margin-bottom: var(--spacing-sm);
+    color: var(--text-color);
+    font-size: 1rem;
+}
+
+.price {
+    font-weight: bold;
+    color: var(--price-color);
+    margin-bottom: var(--spacing-md);
+}
+
+/* Book Now Button */
+.book-now {
+    background-color: var(--accent-color);
+    color: var(--white);
+    padding: var(--spacing-sm) var(--spacing-md);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+}
+
+.book-now:hover {
+    background-color: var(--hover-color);
+}
+
+/* Amenities Section */
+#amenities {
+    padding: var(--spacing-lg);
+    text-align: center;
+    background-color: var(--light-bg);
+}
+
+#amenities h2 {
+    margin-bottom: var(--spacing-md);
+    color: var(--text-color);
+}
+
+.amenities-list {
+    list-style: none;
+    margin-top: var(--spacing-md);
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-sm);
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.amenities-list li {
+    display: flex;
+    align-items: center;
+    background-color: var(--white);
+    padding: var(--spacing-sm);
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease;
+}
+
+.amenities-list li:hover {
+    transform: translateY(-2px);
+}
+
+/* Hide the default checkbox */
+.amenities-list input[type="checkbox"] {
+    display: none;
+}
+
+/* Custom Checkbox Styling */
+.amenities-list label {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-sm);
+    font-size: 1.1rem;
+    color: var(--text-color);
+    cursor: pointer;
+    position: relative;
+    padding-left: 35px;
+}
+
+/* Custom Checkbox Square */
+.amenities-list label::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    width: 20px;
+    height: 20px;
+    border: 2px solid var(--accent-color);
+    border-radius: 4px;
+    background-color: var(--white);
+}
+
+/* Custom Checkbox Checkmark */
+.amenities-list input[type="checkbox"]:checked + label::before {
+    background-color: var(--accent-color);
+}
+
+/* Add a checkmark symbol when checked */
+.amenities-list input[type="checkbox"]:checked + label::after {
+    content: '✔';
+    position: absolute;
+    left: 5px;
+    color: var(--white);
+    font-size: 14px;
+}
+
+/* Icon Styling */
+.amenities-list .icon {
+    font-size: 1.5rem;
+    margin-right: var(--spacing-sm);
+}
+
+/* Testimonials Section */
+#testimonials {
+    padding: var(--spacing-lg);
+    text-align: center;
+}
+
+.testimonial-container {
+    display: flex;
+    justify-content: center;
+    gap: var(--spacing-md);
+    flex-wrap: wrap;
+}
+
+.testimonial {
+    border: 1px solid var(--border-color);
+    padding: var(--spacing-md);
+    margin: var(--spacing-sm);
+    max-width: 300px;
+}
+
+.testimonial img {
+    width: var(--testimonial-img-size);
+    height: var(--testimonial-img-size);
+    border-radius: 50%;
+    margin-bottom: var(--spacing-sm);
+}
+
+/* Google Maps Integration */
+#map {
+    padding: var(--spacing-lg);
+    text-align: center;
+}
+
+#map iframe {
+    width: 100%;
+    max-width: var(--map-width);
+    height: var(--map-height);
+    border: none;
+}
+
+/* Footer Styling */
+footer {
+    background-color: var(--primary-bg);
+    color: var(--white);
+    padding: var(--spacing-md);
+    text-align: center;
+}
+
+.social-links {
+    margin-top: var(--spacing-sm);
+}
+
+.social-links a {
+    color: var(--white);
+    margin: 0 var(--spacing-sm);
+    text-decoration: none;
+}
+
+.social-links a:hover {
+    color: var(--accent-color);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    /* Header */
+    nav ul {
+        flex-direction: column;
+        gap: var(--spacing-sm);
+    }
+
+    /* Room Types */
+    .rooms-container {
+        grid-template-columns: 1fr;
+        gap: var(--spacing-sm);
+    }
+
+    .room-image img {
+        height: 150px;
+    }
+
+    .room-details h3 {
+        font-size: 1.3rem;
+    }
+
+    .room-details p {
+        font-size: 0.9rem;
+    }
+
+    /* Amenities */
+    .amenities-list {
+        max-width: 100%;
+        padding: 0 var(--spacing-sm);
+    }
+
+    .amenities-list label {
+        font-size: 1rem;
+    }
+
+    /* Testimonials */
+    .testimonial-container {
+        flex-direction: column;
+        align-items: center;
+    }
+}

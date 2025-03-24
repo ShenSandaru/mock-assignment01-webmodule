@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <title>Bookshop Haven</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="header-content">
+            <img src="https://www.jetwinghotels.com/wp-content/uploads/2018/01/jetwing-main-logo-W.svg" alt="Bookshop Haven Logo" class="logo">
+            <h1>Jetwin Hotels</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#rooms">Rooms</a></li>
+                <li><a href="#ebooks">E-books</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Room Types Section -->
+<section id="rooms">
+    <h2>Our Room Types</h2>
+    <form class="rooms-container">
+        <article class="room">
+            <input type="radio" name="room" id="single" required>
+            <label for="single" class="room-card">
+                <div class="room-image">
+                    <img src="https://residence.sunwayhouse.com.my/wp-content/uploads/2022/06/Standard-Single-room-1.5-book-shelf-cropped-resized-min-scaled.jpg" alt="Single Room">
+                </div>
+                <div class="room-details">
+                    <h3>Single Room</h3>
+                    <p>Cozy room for one with a comfy bed.</p>
+                    <p class="price">$50/night</p>
+                    <button type="button" class="book-now">Book Now</button>
+                </div>
+            </label>
+        </article>
+        <article class="room">
+            <input type="radio" name="room" id="double">
+            <label for="double" class="room-card">
+                <div class="room-image">
+                    <img src="https://www.residenthotels.com/wp-content/uploads/2022/06/The-Resident-Victoria-Double.jpg" alt="Double Room">
+                </div>
+                <div class="room-details">
+                    <h3>Double Room</h3>
+                    <p>Spacious room with a double bed.</p>
+                    <p class="price">$80/night</p>
+                    <button type="button" class="book-now">Book Now</button>
+                </div>
+            </label>
+        </article>
+        <article class="room">
+            <input type="radio" name="room" id="suite">
+            <label for="suite" class="room-card">
+                <div class="room-image">
+                    <img src="https://www.exoticadubai.tajhotels.com/wp-content/uploads/sites/470/2022/10/01-Luxury-Suite-Sea-View-with-Club-Lounge-Access-2-2000x1000.jpg" alt="Suite">
+                </div>
+                <div class="room-details">
+                    <h3>Suite</h3>
+                    <p>Luxurious suite with extra amenities.</p>
+                    <p class="price">$120/night</p>
+                    <button type="button" class="book-now">Book Now</button>
+                </div>
+            </label>
+        </article>
+    </form>
+</section>
+
+        <!-- Amenities Section -->
+<section id="amenities">
+    <h2>Amenities</h2>
+    <ul class="amenities-list">
+        <li>
+            <input type="checkbox" id="wifi">
+            <label for="wifi">
+                <span class="icon">📶</span> Free Wi-Fi
+            </label>
+        </li>
+        <li>
+            <input type="checkbox" id="breakfast">
+            <label for="breakfast">
+                <span class="icon">🍳</span> Breakfast Included
+            </label>
+        </li>
+        <li>
+            <input type="checkbox" id="gym">
+            <label for="gym">
+                <span class="icon">🏋️</span> Gym Access
+            </label>
+        </li>
+        <li>
+            <input type="checkbox" id="pool">
+            <label for="pool">
+                <span class="icon">🏊</span> Pool
+            </label>
+        </li>
+        <li>
+            <input type="checkbox" id="room-service">
+            <label for="room-service">
+                <span class="icon">🛎️</span> 24/7 Room Service
+            </label>
+        </li>
+    </ul>
+</section>
+
+        <!-- Testimonials Section -->
+        <section id="testimonials">
+            <h2>Testimonials</h2>
+            <div class="testimonial-container">
+                <article class="testimonial">
+                    <img src="https://d2kf8ptlxcina8.cloudfront.net/YH5TFCE1QY-preview.png" alt="Customer 1">
+                    <h3>Cris gale</h3>
+                    <p>"Amazing stay! Loved the cozy room."</p>
+                </article>
+                <article class="testimonial">
+                    <img src="https://media.istockphoto.com/id/1682296067/photo/happy-studio-portrait-or-professional-man-real-estate-agent-or-asian-businessman-smile-for.jpg?s=612x612&w=0&k=20&c=9zbG2-9fl741fbTWw5fNgcEEe4ll-JegrGlQQ6m54rg=" alt="Customer 2">
+                    <h3>Deepak Patel</h3>
+                    <p>"Great service and amenities."</p>
+                </article>
+                <article class="testimonial">
+                    <img src="https://assets-eu-01.kc-usercontent.com/4192440f-b944-0135-c768-e05d36ed3e93/648d33ca-b17c-4f1c-86d7-11496650c962/fran2.png?w=1000&h=1000&fit=clip" alt="Customer 3">
+                    <h3>Jenny Tail</h3>
+                    <p>"The suite was worth every penny!"</p>
+                </article>
+            </div>
+        </section>
+
+        <!-- Google Maps Integration -->
+        <section id="map">
+            <h2>Our Location</h2>
+            
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3957.9932112929027!2d79.83923067456635!3d7.241609892764741!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ae2e94e0e8dfdd1%3A0xb7e9e0067ddd429f!2sJetwing%20Blue!5e0!3m2!1sen!2slk!4v1742808240542!5m2!1sen!2slk" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+
+            </iframe>
+                
+            
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p>Contact: info@jetwinghotels.com | (123) 456-7890</p>
+        <div class="social-links">
+            <a href="#">Facebook</a>
+            <a href="#">Twitter</a>
+            <a href="#">Instagram</a>
+        </div>
+    </footer>
+</body>
+</html>
